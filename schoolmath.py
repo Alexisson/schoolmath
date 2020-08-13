@@ -38,4 +38,32 @@ def piftri(a=0, b=0, c=0):
             return False
 
 
-print(piftri(a=3, b=4, c=6))
+def arifmp(d, n, astart=0, afinish=0):
+    if astart == 0:
+        return -afinish+d*(n-1)
+    elif afinish == 0:
+        return astart+d*(n-1)
+    else:
+        return('Non-correct data')
+
+
+def arifmpsum(n, astart, afinish):
+    return ((astart+afinish)/2)*n
+
+
+def geomp(q, n, bstart=0, bfinish=0):
+    if bstart == 0:
+        return bfinish/m.pow(q, n-1)
+    elif bfinish == 0:
+        return bstart/m.pow(q, n-1)
+    else:
+        return('Non-correct data')
+
+
+def geompsumasc(q, n, bstart=0):
+    return (bstart*(1-m.pow(q, n)))/(1-q)
+
+
+def geompsumdesc(q, bstart=0):
+    if abs(q) < 1:
+        return bstart/(1-q)
